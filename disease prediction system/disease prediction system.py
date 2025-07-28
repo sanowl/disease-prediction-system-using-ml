@@ -1,11 +1,11 @@
-import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
+import fickling
 
 # loading the saved models
-diabetes_model = pickle.load(open('/Users/san./Documents/mulitidisses/diabetes_model.sav', 'rb'))
-heart_disease_model = pickle.load(open('/Users/san./Documents/mulitidisses/heart_disease_model.sav','rb'))
-parkinsons_model = pickle.load(open('/Users/san./Documents/mulitidisses/parkinsons_model.sav', 'rb'))
+diabetes_model = fickling.load(open('/Users/san./Documents/mulitidisses/diabetes_model.sav', 'rb'))
+heart_disease_model = fickling.load(open('/Users/san./Documents/mulitidisses/heart_disease_model.sav','rb'))
+parkinsons_model = fickling.load(open('/Users/san./Documents/mulitidisses/parkinsons_model.sav', 'rb'))
 
 with st.sidebar:
     selected = option_menu('Disease Prediction System',
